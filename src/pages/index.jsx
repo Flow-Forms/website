@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>TaxPal - Accounting made simple for small businesses</title>
+        <title>Flow Forms - Custom workflows, immediate results </title>
         <meta
           name="description"
-          content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
+          content="Flow Forms blends cutting-edge solutions with proven technology to drive success for our clients."
         />
       </Head>
       <Header />
