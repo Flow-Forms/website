@@ -270,63 +270,69 @@
 
                 <div class="h-96"></div>
 
-                <div class="flex justify-center relative" style="z-index: 55">
-                    <span x-on:click="open = true">
-                        <button type="button" class="rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-logo-gray text-white hover:text-slate-100 hover:bg-logo-blue-500 active:bg-logo-gray-800 active:text-blue-100 focus-visible:outline-blue-600" style="z-index: 56">
-                            Let's build something together
-                        </button>
-                    </span>
+                <div class="pb-32">
+                    <div class="flex justify-center relative" style="z-index: 55">
+                        <span x-on:click="open = true">
+                            <button type="button" class="rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-logo-gray text-white hover:text-slate-100 hover:bg-logo-blue-500 active:bg-logo-gray-800 active:text-blue-100 focus-visible:outline-blue-600" style="z-index: 56">
+                                Let's build something together
+                            </button>
+                        </span>
 
-                    <!-- Modal-->
-                    <div
-                            x-show="open"
-                            style="display: none; z-index: 57"
-                            x-on:keydown.escape.prevent.stop="open = false"
-                            role="dialog"
-                            aria-modal="true"
-                            x-id="['modal-title']"
-                            :aria-labelledby="$id('modal-title')"
-                            class="fixed inset-0 overflow-y-auto"
-                    >
-                        <!-- Overlay -->
-                        <div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-80"></div>
-
-                        <!-- Panel -->
+                        <!-- Modal-->
                         <div
-                                x-show="open" x-transition
-                                x-on:click="open = false"
-                                class="relative flex min-h-screen items-center justify-center p-4"
+                                x-show="open"
+                                style="display: none; z-index: 57"
+                                x-on:keydown.escape.prevent.stop="open = false"
+                                role="dialog"
+                                aria-modal="true"
+                                x-id="['modal-title']"
+                                :aria-labelledby="$id('modal-title')"
+                                class="fixed inset-0 overflow-y-auto"
                         >
-                            <div
-                                    x-on:click.stop
-                                    x-trap.noscroll.inert="open"
-                                    class="relative w-full max-w-2xl overflow-y-auto"
-                            >
-                                <!-- Content -->
-                                <div class="rounded-xl bg-white shadow-lg">
-                                    <iframe src="https://ff.flowforms.io/permanent/form/for_xlj5BxYLqmDzr" width="100%" height="300px" title="Connect with Flow Forms" class="rounded-xl shadow-lg"></iframe>
-                                </div>
+                            <!-- Overlay -->
+                            <div x-show="open" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-80"></div>
 
-                                <!-- Buttons -->
-                                <div class="my-2 flex space-x-2">
-                                    <button type="button" x-on:click="open = false" class="text-gray-400 underline">
-                                        Cancel
-                                    </button>
+                            <!-- Panel -->
+                            <div
+                                    x-show="open" x-transition
+                                    x-on:click="open = false"
+                                    class="relative flex min-h-screen items-center justify-center p-4 h-5/6"
+                            >
+                                <div
+                                        x-on:click.stop
+                                        x-trap.noscroll.inert="open"
+                                        class="relative w-full max-w-2xl overflow-y-auto h-5/6"
+                                >
+                                    <!-- Content -->
+                                    <div class="rounded-xl bg-white shadow-lg h-5/6">
+                                        <iframe src="https://ff.flowforms.io/permanent/form/for_xlj5BxYLqmDzr" width="100%" height="300px" title="Connect with Flow Forms" class="rounded-xl shadow-lg"></iframe>
+                                    </div>
+
+                                    <!-- Buttons -->
+                                    <div class="my-2 flex space-x-2">
+                                        <button type="button" x-on:click="open = false" class="text-gray-400 underline">
+                                            Cancel
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="flex justify-center items-center space-x-4 mt-6 text-sm relative" style="z-index: 56">
-                    <a href="https://help.flowforms.io/" class="text-slate-400 underline hover:no-underline hover:text-slate-900" target="_blank">support</a>
+                    <div class="flex justify-center items-center space-x-4 mt-6 text-sm relative" style="z-index: 56">
+                        <a href="https://help.flowforms.io/" class="text-slate-400 underline hover:no-underline hover:text-slate-900" target="_blank">support</a>
 
-                    <a href="https://status.flowforms.io/" class="text-slate-400 underline hover:no-underline hover:text-slate-900" target="_blank">status</a>
+                        <a href="https://status.flowforms.io/" class="text-slate-400 underline hover:no-underline hover:text-slate-900" target="_blank">status</a>
 
-                    <a href="privacy.html" class="text-slate-400 underline hover:no-underline hover:text-slate-900">privacy</a>
+                        <a href="privacy.html" class="text-slate-400 underline hover:no-underline hover:text-slate-900">privacy</a>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
+
+    <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="BSFPZJNY" defer></script>
+    <!-- / Fathom -->
 </body>
 </html>
